@@ -1,0 +1,11 @@
+class CreateMangerHistories < ActiveRecord::Migration[5.2]
+  def change
+    create_table :manger_histories do |t|
+      t.date :joining_date
+      t.string :total_experience
+      t.references :manager, foreign_key: true
+
+      t.timestamps
+    end
+  end
+end
