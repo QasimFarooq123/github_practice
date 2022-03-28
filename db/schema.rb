@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_22_062049) do
+ActiveRecord::Schema.define(version: 2022_03_25_130004) do
 
   create_table "aggregates", force: :cascade do |t|
     t.integer "data"
@@ -69,6 +69,19 @@ ActiveRecord::Schema.define(version: 2022_03_22_062049) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["manager_id"], name: "index_manger_histories_on_manager_id"
+  end
+
+  create_table "oranges", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "status"
   end
 
   create_table "products", force: :cascade do |t|
